@@ -1,11 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <title>CSS Meme Slider</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <h1 class="title">Cats Meme</h1>
+      </header>
+
+      <main class="main">
+        <div class="image-container">
+          <div class="slider-image">
+            <img class="meme-image" src="/assets/meme1.jpg" alt="cat" />
+            <img class="meme-image" src="/assets/meme2.jpg" alt="cat" />
+            <img class="meme-image" src="/assets/meme3.jpg" alt="cat" />
+            <img class="meme-image" src="/assets/meme4.jpg" alt="cat" />
+          </div>
+        </div>
+
+        <div class="text-container">
+          <div class="slider-text">
+            <p class="meme-text">1</p>
+            <p class="meme-text">2</p>
+            <p class="meme-text">3</p>
+            <p class="meme-text">4</p>
+          </div>
+        </div>
+
+        <div class="slider-control">
+          <input class="control" type="radio" name="control" checked />
+          <input class="control" type="radio" name="control" id="btn2" />
+          <input class="control" type="radio" name="control" />
+          <input class="control" type="radio" name="control" />
+        </div>
+      </main>
+
+      <footer class="footer">
+        <h6 class="footer-copyright">CSS Meme Slider 2023</h6>
+        <a class="footer-link" href="" title="Rsschool">Rsschool</a>
+        <a
+          class="footer-link"
+          href="https://github.com/DinaPravoslavnova"
+          title="Github"
+          >Github</a
+        >
+      </footer>
+    </div>
+  </body>
 </html>
