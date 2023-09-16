@@ -1,0 +1,87 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: "Roboto", sans-serif;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.title {
+  text-align: center;
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  width: 40vw;
+  margin: auto;
+}
+
+.image-container,
+.text-container {
+  display: flex;
+  width: 40vw;
+  overflow: hidden;
+}
+
+.slider-image,
+.slider-text {
+  display: flex;
+}
+
+.meme-image {
+  width: 40vw;
+  height: 30vw;
+  object-fit: cover;
+}
+
+.meme-text {
+  width: 40vw;
+  height: 10vw;
+}
+.control {
+  cursor: pointer;
+}
+
+.main:has(#meme-one:checked) .slider-image,
+.main:has(#meme-one:checked) .slider-text {
+  transform: translateX(0);
+}
+
+.main:has(#meme-two:checked) .slider-image,
+.main:has(#meme-two:checked) .slider-text {
+  transform: translateX(-25%);
+}
+
+.main:has(#meme-three:checked) .slider-image,
+.main:has(#meme-three:checked) .slider-text {
+  transform: translateX(-50%);
+}
+
+.main:has(#meme-four:checked) .slider-image,
+.main:has(#meme-four:checked) .slider-text {
+  transform: translateX(-75%);
+}
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: auto;
+}
+
+.footer-copyright,
+.footer-link {
+  white-space: nowrap;
+  margin: 1em;
+  font-size: 1em;
+  font-weight: 900;
+}
