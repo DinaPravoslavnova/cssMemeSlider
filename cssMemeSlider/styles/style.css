@@ -50,8 +50,9 @@ body {
   align-items: center;
   width: 52em;
   margin: auto;
+  padding: 1em 1em 2em;
   background-color: rgb(255, 130, 45, 0.5);
-  padding: 1em;
+
   border-radius: 1em;
   box-shadow: 0 0.25em 0.5em 0.25em rgb(187, 29, 128, 0.5);
 }
@@ -62,7 +63,7 @@ body {
   margin-bottom: 2em;
   overflow: hidden;
   border-radius: 1em;
-  border: 0.2em solid white;
+  border: 0.2em solid rgb(255, 255, 255);
 }
 
 .text-container {
@@ -90,7 +91,7 @@ body {
 .meme-text {
   width: 20%;
   margin: 0;
-  color: #fff;
+  color: rgb(255, 255, 255);
   font-size: 1.5em;
 }
 
@@ -102,6 +103,7 @@ body {
 
 .label-control {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 2em;
@@ -111,9 +113,9 @@ body {
 }
 
 .control {
-  /* display: none; */
   width: 0;
   height: 0;
+  margin: 0;
 }
 
 .span-control {
@@ -121,19 +123,19 @@ body {
   width: 60%;
   height: 60%;
   border-radius: 50%;
-  background-color: #ca0b4a;
-  border: 0.25em solid #ca0b4a;
+  background-color: rgb(202, 11, 74);
+  border: 0.25em solid rgb(202, 11, 74);
   transition: ease-in-out 0.2s;
 }
 
 .label-control:hover .span-control {
-  background-color: #ff6723;
-  border: 0.25em solid #ff6723;
+  background-color: rgb(255, 103, 35);
+  border: 0.25em solid rgb(255, 103, 35);
 }
 
 .label-control:active .span-control {
-  background-color: #bb1d80;
-  border: 0.25em solid #bb1d80;
+  background-color: rgb(187, 29, 128);
+  border: 0.25em solid rgb(187, 29, 128);
   transform: scale(1.4);
 }
 
@@ -196,7 +198,13 @@ body:has(#meme-five:checked) .slider-text {
   white-space: nowrap;
   margin: 1em;
   font-size: 1em;
-  font-weight: 900;
+  font-weight: 400;
+  color: hwb(0 100% 0%);
+  transition: ease-in-out 0.2s;
+}
+
+.footer-link:hover {
+  color: rgb(187, 29, 128);
 }
 
 @media (max-width: 1067px) {
@@ -228,9 +236,6 @@ body:has(#meme-five:checked) .slider-text {
 @media (max-width: 520px) {
   .header {
     flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    padding-top: 1em;
   }
 
   .title {
