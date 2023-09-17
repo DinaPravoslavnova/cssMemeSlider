@@ -8,7 +8,7 @@ html {
 
 body {
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .wrapper {
@@ -48,12 +48,12 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  width: calc(50vw + 2em);
+  width: 52em;
   margin: auto;
   background-color: rgb(255, 130, 45, 0.5);
   padding: 1em;
   border-radius: 1em;
-  box-shadow: 0 0.25em .5em 0.25em rgb(187, 29, 128, 0.5);
+  box-shadow: 0 0.25em 0.5em 0.25em rgb(187, 29, 128, 0.5);
 }
 
 .image-container {
@@ -82,8 +82,8 @@ body {
 }
 
 .meme-image {
-  width: 50vw;
-  height: 30vw;
+  width: 50em;
+  height: 30em;
   object-fit: cover;
 }
 
@@ -92,7 +92,6 @@ body {
   margin: 0;
   color: #fff;
   font-size: 1.5em;
-  font-weight: 900;
 }
 
 .slider-control {
@@ -198,4 +197,43 @@ body:has(#meme-five:checked) .slider-text {
   margin: 1em;
   font-size: 1em;
   font-weight: 900;
+}
+
+@media (max-width: 1067px) {
+  .main {
+    width: calc(75vw + 2em);
+  }
+
+  .meme-image {
+    width: 75vw;
+    height: 45vw;
+  }
+}
+
+@media (max-width: 960px) {
+  .text-container {
+    width: 100%;
+    order: 1;
+  }
+
+  .slider-control {
+    margin: 0 auto 1em;
+  }
+
+  .meme-text {
+    font-size: 1.2em;
+  }
+}
+
+@media (max-width: 520px) {
+  .header {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 1em;
+  }
+
+  .title {
+    font-size: 2em;
+  }
 }
