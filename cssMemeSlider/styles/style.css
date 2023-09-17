@@ -4,70 +4,183 @@
 
 html {
   scroll-behavior: smooth;
-  font-family: "Roboto", sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
 }
 
 .wrapper {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background-color: rgb(246, 229, 97);
+  background: linear-gradient(
+    90deg,
+    rgba(246, 229, 97, 1) 0%,
+    rgba(29, 188, 253, 1) 50%,
+    rgba(255, 95, 246, 1) 100%
+  );
+}
+
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 1em;
 }
 
 .title {
-  text-align: center;
+  font-size: 3em;
+  letter-spacing: 0.2em;
+  color: rgb(255, 255, 255);
+}
+
+.logo {
+  width: 5em;
+  height: 5em;
+  transform: rotate(10deg);
 }
 
 .main {
   display: flex;
   flex-wrap: wrap;
-  width: 40vw;
+  justify-content: space-between;
+  align-items: center;
+  width: calc(50vw + 2em);
   margin: auto;
+  background-color: rgb(255, 130, 45, 0.5);
+  padding: 1em;
+  border-radius: 1em;
+  box-shadow: 0 0.25em .5em 0.25em rgb(187, 29, 128, 0.5);
 }
 
-.image-container,
-.text-container {
+.image-container {
   display: flex;
-  width: 40vw;
+  width: 100%;
+  margin-bottom: 2em;
+  overflow: hidden;
+  border-radius: 1em;
+  border: 0.2em solid white;
+}
+
+.text-container {
+  width: calc(100% - 15em);
   overflow: hidden;
 }
 
-.slider-image,
+.slider-image {
+  display: flex;
+  transition: ease-in-out 0.2s;
+}
+
 .slider-text {
   display: flex;
+  width: 500%;
+  transition: ease-in-out 0.2s;
 }
 
 .meme-image {
-  width: 40vw;
+  width: 50vw;
   height: 30vw;
   object-fit: cover;
 }
 
 .meme-text {
-  width: 40vw;
-  height: 10vw;
-}
-.control {
-  cursor: pointer;
+  width: 20%;
+  margin: 0;
+  color: #fff;
+  font-size: 1.5em;
+  font-weight: 900;
 }
 
-.main:has(#meme-one:checked) .slider-image,
-.main:has(#meme-one:checked) .slider-text {
+.slider-control {
+  display: flex;
+  justify-content: space-between;
+  width: 12em;
+}
+
+.label-control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2em;
+  height: 2em;
+  cursor: pointer;
+  transition: ease-in-out 0.2s;
+}
+
+.control {
+  /* display: none; */
+  width: 0;
+  height: 0;
+}
+
+.span-control {
+  display: block;
+  width: 60%;
+  height: 60%;
+  border-radius: 50%;
+  background-color: #ca0b4a;
+  border: 0.25em solid #ca0b4a;
+  transition: ease-in-out 0.2s;
+}
+
+.label-control:hover .span-control {
+  background-color: #ff6723;
+  border: 0.25em solid #ff6723;
+}
+
+.label-control:active .span-control {
+  background-color: #bb1d80;
+  border: 0.25em solid #bb1d80;
+  transform: scale(1.4);
+}
+
+body:has(#meme-one:checked) #control-one {
+  background-color: transparent;
+}
+
+body:has(#meme-two:checked) #control-two {
+  background-color: transparent;
+}
+
+body:has(#meme-three:checked) #control-three {
+  background-color: transparent;
+}
+
+body:has(#meme-four:checked) #control-four {
+  background-color: transparent;
+}
+
+body:has(#meme-five:checked) #control-five {
+  background-color: transparent;
+}
+
+body:has(#meme-one:checked) .slider-image,
+body:has(#meme-one:checked) .slider-text {
   transform: translateX(0);
 }
 
-.main:has(#meme-two:checked) .slider-image,
-.main:has(#meme-two:checked) .slider-text {
-  transform: translateX(-25%);
+body:has(#meme-two:checked) .slider-image,
+body:has(#meme-two:checked) .slider-text {
+  transform: translateX(-20%);
 }
 
-.main:has(#meme-three:checked) .slider-image,
-.main:has(#meme-three:checked) .slider-text {
-  transform: translateX(-50%);
+body:has(#meme-three:checked) .slider-image,
+body:has(#meme-three:checked) .slider-text {
+  transform: translateX(-40%);
 }
 
-.main:has(#meme-four:checked) .slider-image,
-.main:has(#meme-four:checked) .slider-text {
-  transform: translateX(-75%);
+body:has(#meme-four:checked) .slider-image,
+body:has(#meme-four:checked) .slider-text {
+  transform: translateX(-60%);
+}
+
+body:has(#meme-five:checked) .slider-image,
+body:has(#meme-five:checked) .slider-text {
+  transform: translateX(-80%);
 }
 
 .footer {
@@ -76,6 +189,7 @@ html {
   justify-content: space-around;
   align-items: center;
   margin-top: auto;
+  padding-top: 1em;
 }
 
 .footer-copyright,

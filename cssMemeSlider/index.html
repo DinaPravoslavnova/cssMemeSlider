@@ -17,6 +17,7 @@
     <div class="wrapper">
       <header class="header">
         <h1 class="title">Cats Meme</h1>
+        <img class="logo" src="favicon.png" alt="Logo"/>
       </header>
 
       <main class="main">
@@ -26,21 +27,23 @@
             <img class="meme-image" src="./assets/meme2.jpg" alt="cat" />
             <img class="meme-image" src="./assets/meme3.jpg" alt="cat" />
             <img class="meme-image" src="./assets/meme4.jpg" alt="cat" />
+            <img class="meme-image" src="./assets/meme5.jpg" alt="cat" />
           </div>
         </div>
 
         <div class="text-container">
           <div class="slider-text">
-            <p class="meme-text">1</p>
-            <p class="meme-text">2</p>
-            <p class="meme-text">3</p>
-            <p class="meme-text">4</p>
+            <p class="meme-text">Когда пришел учиться в Rsschool</p>
+            <p class="meme-text">Когда увидел задания</p>
+            <p class="meme-text">Когда пытаешься понять все и сразу</p>
+            <p class="meme-text">Когда, наконец, что-то получилось</p>
+            <p class="meme-text">Когда получил максимальный балл</p>
           </div>
         </div>
 
         <div class="slider-control">
           <label class="label-control">
-            <span class="span-control"></span>
+            <span class="span-control" id="control-one"></span>
             <input
               class="control"
               type="radio"
@@ -50,11 +53,11 @@
             />
           </label>
           <label class="label-control">
-            <span class="span-control"></span>
+            <span class="span-control" id="control-two"></span>
             <input class="control" type="radio" name="control" id="meme-two" />
           </label>
           <label class="label-control">
-            <span class="span-control"></span>
+            <span class="span-control" id="control-three"></span>
             <input
               class="control"
               type="radio"
@@ -63,8 +66,12 @@
             />
           </label>
           <label class="label-control">
-            <span class="span-control"></span>
+            <span class="span-control" id="control-four"></span>
             <input class="control" type="radio" name="control" id="meme-four" />
+          </label>
+          <label class="label-control">
+            <span class="span-control" id="control-five"></span>
+            <input class="control" type="radio" name="control" id="meme-five" />
           </label>
         </div>
       </main>
