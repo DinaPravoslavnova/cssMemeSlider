@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <title>CSS Meme Slider</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <h1 class="title">Cats Meme</h1>
+        <img class="logo" src="favicon.png" alt="Logo" />
+      </header>
+
+      <main class="main">
+        <div class="image-container">
+          <div class="slider-image">
+            <img class="meme-image" src="./assets/meme1.jpg" alt="cat" />
+            <img class="meme-image" src="./assets/meme2.jpg" alt="cat" />
+            <img class="meme-image" src="./assets/meme3.jpg" alt="cat" />
+            <img class="meme-image" src="./assets/meme4.jpg" alt="cat" />
+            <img class="meme-image" src="./assets/meme5.jpg" alt="cat" />
+          </div>
+        </div>
+
+        <div class="text-container">
+          <div class="slider-text">
+            <p class="meme-text">Когда пришел учиться в RS School</p>
+            <p class="meme-text">Когда увидел задания</p>
+            <p class="meme-text">Когда пытаешься понять все и сразу</p>
+            <p class="meme-text">Когда, наконец, что-то получилось</p>
+            <p class="meme-text">Когда получил максимальный балл</p>
+          </div>
+        </div>
+
+        <div class="slider-control">
+          <label class="label-control">
+            <span class="span-control" id="control-one"></span>
+            <input
+              class="control"
+              type="radio"
+              name="control"
+              id="meme-one"
+              checked
+            />
+          </label>
+          <label class="label-control">
+            <span class="span-control" id="control-two"></span>
+            <input class="control" type="radio" name="control" id="meme-two" />
+          </label>
+          <label class="label-control">
+            <span class="span-control" id="control-three"></span>
+            <input
+              class="control"
+              type="radio"
+              name="control"
+              id="meme-three"
+            />
+          </label>
+          <label class="label-control">
+            <span class="span-control" id="control-four"></span>
+            <input class="control" type="radio" name="control" id="meme-four" />
+          </label>
+          <label class="label-control">
+            <span class="span-control" id="control-five"></span>
+            <input class="control" type="radio" name="control" id="meme-five" />
+          </label>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <h6 class="footer-copyright">CSS Meme Slider 2023</h6>
+        <a
+          class="footer-link"
+          href="https://rs.school/js-stage0/"
+          target="blank"
+          title="RS School"
+          >Rolling Scopes School</a
+        >
+        <a
+          class="footer-link"
+          href="https://github.com/DinaPravoslavnova"
+          target="blank"
+          title="Github"
+          >@dinapravoslavnova</a
+        >
+      </footer>
+    </div>
+  </body>
+</html>
